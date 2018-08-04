@@ -1,6 +1,29 @@
 <!doctype html>
 <title>Kau Bosh</title>
 <link rel="shortcut icon" href="./favicon.png" />
+<script language="JavaScript1.2">
+function disableselect(e){
+return false
+}
+function reEnable(){
+return true
+}
+document.onselectstart=new Function ("return false")
+if (window.sidebar){
+document.onmousedown=disableselect
+document.onclick=reEnable
+}
+document.oncontextmenu = function(){return false}
+if(document.layers) {
+    window.captureEvents(Event.MOUSEDOWN);
+    window.onmousedown = function(e){
+        if(e.target==document)return false;
+    }
+}
+else {
+    document.onmousedown = function(){return false}
+}
+</script>
 <style>
   @import url("https://fonts.googleapis.com/css?family=Asap");
   body { margin-top:0px; text-align: center; padding: 150px; border-top: 2px solid #0ba360;}
@@ -13,5 +36,5 @@
 <article>
 	<img src="logo.png">
     <h1>I&rsquo;ll be back soon!</h1>
-    <a style="text-decoration:none" href="malito:kaubosh@gmail.com" target="_blank">@KauBosh</a>
+    <a href="malito:kaubosh@gmail.com" target="_blank">@KauBosh</a>
 </article>
