@@ -1,5 +1,0 @@
-﻿User-Agent: *
-Disallow: 
-Allow: /
-
-Sitemap: https://kaubosh.github.io/sitemap.xml
